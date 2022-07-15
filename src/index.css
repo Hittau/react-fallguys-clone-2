@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500;700&family=Open+Sans:wght@300&family=Titan+One&display=swap');
+
+@layer components {
+  .clipping-right {
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 5vw), 0% 100%);
+  }
+  .clipping-left {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 5vw));
+  }
+  .text-shadow {
+    text-shadow: rgb(0 0 0 / 25%) 0px 4px 4px;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.swiper-wrapper {
+  padding-bottom: 24px;
+}
+.swiper-pagination-progressbar {
+  top: auto!important;
+  bottom: 76px;
+  height: 10px!important;
+  background: #ffffff66!important;
+}
+.swiper-pagination-progressbar > span {
+  background: #ff30a4!important;
+}
+.swiper-button-next {
+  top: auto!important;
+  bottom: 0!important;
+  color: #fff!important;
+}
+.swiper-button-prev {
+  top: auto!important;
+  bottom: 0!important;
+  left: auto!important;
+  right: 50px!important;
+  color: #fff!important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: url('data:image/svg+xml; utf8, <svg direction="left" class="ArrowButton__SVG-sc-175kdh4-0 eKlcrw NewsCarouselSection__ArrowButton-sc-19pb3iw-11 fbukVD" width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.227 24C9.80291 23.9981 9.38819 23.875 9.03168 23.6453C8.67518 23.4156 8.39172 23.0888 8.21469 22.7034C8.03766 22.318 7.97443 21.8901 8.03244 21.47C8.09045 21.0498 8.26729 20.6551 8.54213 20.3321L14.3664 13.4828C14.4804 13.3486 14.5429 13.1783 14.5429 13.0022C14.5429 12.8262 14.4804 12.6558 14.3664 12.5217L8.54213 5.6724C8.35059 5.45139 8.20463 5.19471 8.11264 4.9171C8.02065 4.63949 7.98444 4.34643 8.00609 4.05478C8.02774 3.76312 8.10684 3.47863 8.23882 3.21765C8.3708 2.95666 8.55306 2.72434 8.77514 2.53405C8.99721 2.34375 9.25471 2.19922 9.53283 2.10878C9.81095 2.01834 10.1042 1.98376 10.3957 2.00704C10.6873 2.03032 10.9713 2.111 11.2315 2.24443C11.4918 2.37787 11.7231 2.56143 11.9121 2.78456L20.1921 12.5219C20.3061 12.6561 20.3687 12.8264 20.3687 13.0025C20.3687 13.1785 20.3061 13.3489 20.1921 13.483L11.9121 23.2204C11.7236 23.4423 11.4931 23.6249 11.2339 23.7576C10.9747 23.8902 10.6918 23.9704 10.4015 23.9936C10.3432 23.9979 10.285 24 10.227 24Z" fill="white"></path><path class="focus" d="M10.2225 25H10.227C10.3097 25 10.3922 24.9969 10.4747 24.9909L10.4747 24.9909L10.4809 24.9904C10.9024 24.9568 11.3131 24.8404 11.6895 24.6477C12.0659 24.4551 12.4005 24.1901 12.6743 23.8678L20.9539 14.1308L20.9542 14.1305C21.2218 13.8155 21.3687 13.4157 21.3687 13.0025C21.3687 12.5892 21.2218 12.1894 20.9542 11.8745L20.9539 11.8741L12.6751 2.13811C12.6749 2.13789 12.6747 2.13768 12.6745 2.13746C12.4004 1.81407 12.0651 1.54802 11.6878 1.35459C11.3103 1.16102 10.8982 1.04399 10.4753 1.01022C10.0524 0.976444 9.62703 1.0266 9.22358 1.1578C8.82012 1.289 8.44659 1.49865 8.12444 1.77471C7.80229 2.05076 7.53789 2.38777 7.34643 2.76636C7.15498 3.14495 7.04025 3.55765 7.00884 3.98074C6.97742 4.40382 7.02995 4.82894 7.1634 5.23165C7.29631 5.63275 7.50689 6.00374 7.78309 6.32347L13.4624 13.0022L7.78054 19.684C7.78047 19.6841 7.78039 19.6842 7.78032 19.6843C7.38211 20.1523 7.1259 20.7244 7.04184 21.3332C6.95776 21.9421 7.0494 22.5623 7.30598 23.1208C7.56255 23.6794 7.97336 24.153 8.49006 24.4859C9.00675 24.8188 9.60781 24.9972 10.2225 25Z"></path></svg>') !important;
+  font-family: none !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.swiper-button-prev::after {
+  transform: rotate(180deg)
+}
+
+::-moz-selection {
+  background: #ff30a4;
+}
+
+::selection {
+  background: #ff30a4;
 }

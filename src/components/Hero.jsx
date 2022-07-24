@@ -8,7 +8,7 @@ import Background from './Background'
 
 const Hero = () => {
 	return (
-		<section className='relative -mb-[5vw] z-10 clipping-right'>
+		<section className='relative -mb-[5vw] z-10 clipping-right after:absolute after:bottom-[2.48vw] after:right-0 after:bg-white after:h-[5px] after:w-full after:-rotate-[2.85deg]'>
 			<Background src={HeroBackground} />
 			<div className='relative'>
 				<DownloadBanner />
@@ -26,15 +26,6 @@ const Hero = () => {
 					</Button>
 				</div>
 			</div>
-			{/* <div
-				className='relative -mt-[5vw]'
-				style={{
-					clipPath: 'polygon(0% 0%, 100% 0%, 100% calc(100% - 5vw), 0% 100%)',
-				}}
-			>
-				<div className='h-[calc(5vw_+_5px)] bg-white'></div>
-			</div> */}
-			{/* <div className='absolute bottom-[calc(7.5vw_-_10%)] bg-white h-1 w-full -rotate-[2.9deg]'></div> */}
 		</section>
 	)
 }

@@ -7,7 +7,7 @@ import TidingsSlider from '../components/TidingsSlider'
 
 const Tidings = () => {
 	return (
-		<section className='relative -mb-[5vw] clipping-left'>
+		<section className='relative -mb-[5vw] clipping-left after:absolute after:bottom-[2.48vw] after:right-0 after:bg-white after:h-[5px] after:w-full after:rotate-[2.85deg]'>
 			<div className='xxl:max-w-[1200px] max-w-5xl mx-auto py-[10vw] px-8'>
 				<Background src={TidingsBackground} />
 				<div className='flex flex-col gap-12 xl:gap-0 xl:flex-row justify-between'>

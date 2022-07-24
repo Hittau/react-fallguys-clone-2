@@ -163,6 +163,8 @@ const TidingsSlider = () => {
 			slidesPerView={1}
 			slidesPerGroup={1}
 			grabCursor={true}
+			lazy={true}
+			preloadImages={false}
 			breakpoints={{
 				600: {
 					slidesPerView: 2,
@@ -178,7 +180,7 @@ const TidingsSlider = () => {
 			className='mySwiper h-[450px] xxl:max-w-4xl xl:max-w-[784px] max-w-full'
 		>
 			{sliderSlides.map(({ label, image, date, id }) => (
-				<SwiperSlide key={id}>
+				<SwiperSlide key={id} className='px-[10px] w-[calc(100%_-_20px)]'>
 					<TidingsCard label={label} image={image} date={date} />
 				</SwiperSlide>
 			))}

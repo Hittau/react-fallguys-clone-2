@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
 	CURRENT_SEASON_ROUTE,
 	HOME_ROUTE,
@@ -10,31 +10,31 @@ import HeaderNavItem from './HeaderNavItem'
 
 const navItems = [
 	{
-		label: 'current season',
 		path: CURRENT_SEASON_ROUTE,
+		label: 'current season',
 	},
 	{
-		label: 'previous seasons',
 		path: SEASON_ARCHIVE_ROUTE,
+		label: 'previous seasons',
 	},
 	{
-		label: 'news',
 		path: NEWS_ROUTE,
+		label: 'news',
 	},
 	{
-		label: 'season pass',
 		path: SEASON_PASS_ROUTE,
+		label: 'season pass',
 	},
 	{
-		label: 'merch',
 		path: HOME_ROUTE,
+		label: 'merch',
 	},
 ]
 
 const HeaderNavItems = () => {
 	return (
 		<div className='flex flex-col xxl:flex-row divide-[#404040] divide-y-[1px] xxl:w-auto xxl:divide-y-0 flex-auto'>
-			{navItems.map(({ label, path }) => (
+			{navItems.map(({ path, label }) => (
 				<HeaderNavItem key={path} label={label} path={path} />
 			))}
 		</div>

@@ -10,10 +10,10 @@ const Description = () => {
 		<section className='relative -mb-[5vw]'>
 			<div className='max-w-[1200px] mx-auto py-[10vw] px-8'>
 				<Background src={DescriptionBackground} />
-				<div className='flex flex-col md:flex-row justify-center items-center gap-6'>
+				<div className='flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16'>
 					<img
 						src={DescriptionImage}
-						className='animate-levitation flex-auto w-full max-w-[588px]'
+						className='animate-levitation flex-auto w-full max-w-[500px]'
 						alt='DescriptionImg'
 					/>
 					<div className='md:max-w-md text-center md:text-left'>

@@ -1,4 +1,5 @@
 {
+  "homepage": "https://hittau.github.io/react-fallguys-clone-githubpages",
   "name": "react-fallguys-clone",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "gh-pages": "latest",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.5"
   }
